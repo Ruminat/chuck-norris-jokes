@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap')
+$base-font-family: 'Fira Sans', sans-serif, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI'
+
+@import '~spectre.css/src/spectre.scss'
+@import '~spectre.css/src/icons.scss'
+
+::placeholder
+  color: #666 !important
+
+html, body, .half
+  min-height: 100vh
+
+.dropdown *
+  font-size: 0.7rem !important
+.form-input, .input-group-addon
+  background: rgba(255, 255, 255, 0.7) !important
+  border: none !important
+  outline: none !important
+  font-size: 0.7rem !important
+  box-shadow: none !important
+.input-group-addon
+  background: $error-color !important
+  border: none !important
+  color: white !important
+
+textarea.form-input
+  margin-top: 0.1rem
+  resize: none
+  max-width: 100% !important
+  width: 100% !important
+  cursor: default !important
+
+body
+  background-image: url('assets/explosion2.gif')
+  background-size: cover
+
+.chuck-image, .content
+  @extend .column, .col-6
+
+.half
+  display: flex
+  align-items: center
+.wrapper
+  display: inline
+.chuck-image
+  justify-content: flex-end
+
+.the-greatest
+  width: 100%
+  max-width: 15rem
+  opacity: 0.8
+
+@media (max-width: $size-md)
+  .half
+    display: flex
+    min-height: 0 !important
+    margin-top: 1rem
+    padding: 1rem
+  .chuck-image, .content
+    width: 100%
+    align-items: flex-start
+    justify-content: center
+  .content
+    margin-bottom: 1rem
