@@ -24,19 +24,14 @@
                 a(href="#") {{ category }}
           //- The word
           span.input-group-addon With a word
-          input.form-input(placeholder="Russia" v-model="word")
+          input.form-input(placeholder="Russia" v-model="word" @keyup.enter="getJoke")
         //- The joke's text
         textarea.form-input(spellcheck="false" readonly v-model="currentJoke" rows="4")
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data () {
     return {
       currentJoke: '',
